@@ -22,9 +22,9 @@ const Navbar = () => {
         {/* desktop nav & hire me Button */}
         <div className="hidden xl:flex items-center  gap-8">
           <Nav />
-          <a href="/contato">
+          <Link to="/contato">
             <Button className="bg-accent font-brandon text-xl font-medium px-3 py-1 rounded-full text-primary hover:bg-accent-hover ">Contato</Button>
-          </a>
+          </Link>
         </div>
 
         {/* mobile nav */}
