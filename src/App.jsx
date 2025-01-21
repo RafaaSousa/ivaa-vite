@@ -89,8 +89,8 @@ function App() {
             <div className="flex flex-col items-center justify-center">
               <img
                 className="xl:w-[700px]"
-                src="/mobileCamilaOneSvg.svg"
-                alt="Next.js logo"
+                src="/Camila Pedra.svg"
+                alt="Camila Pedra"
               />
             </div>
 
