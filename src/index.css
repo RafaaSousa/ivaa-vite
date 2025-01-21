@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Adventures Unlimited */
+@font-face {
+  font-family: 'Adventures';
+  src: url('/src/fonts/adventures/AdventuresUnlimited-ScriptBold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Adventures';
+  src: url('/src/fonts/adventures/AdventuresUnlimited-ScriptRg.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Brandon Grotesque */
+@font-face {
+  font-family: 'Brandon';
+  src: url('/src/fonts/brandon/Brandon_bld_it.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Brandon';
+  src: url('/src/fonts/brandon/Brandon_blk_it.otf') format('opentype');
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Brandon';
+  src: url('/src/fonts/brandon/Brandon_blk.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Brandon';
+  src: url('/src/fonts/brandon/Brandon_light_it.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Brandon';
+  src: url('/src/fonts/brandon/Brandon_light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Brandon';
+  src: url('/src/fonts/brandon/Brandon_med_it.otf') format('opentype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Brandon';
+  src: url('/src/fonts/brandon/Brandon_med.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Brandon';
+  src: url('/src/fonts/brandon/Brandon_reg_it.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Brandon';
+  src: url('/src/fonts/brandon/Brandon_reg.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Brandon';
+  src: url('/src/fonts/brandon/Brandon_thin_it.otf') format('opentype');
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Brandon';
+  src: url('/src/fonts/brandon/Brandon_thin.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+}
+
