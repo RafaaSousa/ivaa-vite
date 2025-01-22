@@ -1,14 +1,12 @@
 import SocialMediaLinksNav from "./ui/SocialMediaLinksNav";
 import { AiOutlineMenu } from "react-icons/ai";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import {
-  DrawerActionTrigger,
   DrawerBackdrop,
   DrawerBody,
   DrawerCloseTrigger,
   DrawerContent,
-  DrawerFooter,
   DrawerHeader,
   DrawerRoot,
   DrawerTitle,
@@ -18,7 +16,7 @@ import {
 const links = [
   {
     name: "home",
-    path: "/",
+    path: "#home",
   },
   {
     name: "Sobre",
@@ -43,11 +41,26 @@ const links = [
 ];
 
 const MobileNav = () => {
+  const navigate = useNavigate();
+
+  const handleAnchorClick = (path) => {
+    if (path.startsWith("#")) {
+      // Redireciona para a página inicial e depois para a seção
+      navigate("/");
+      setTimeout(() => {
+        const element = document.querySelector(path);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100); // Aguarda o redirecionamento antes de rolar para a seção
+    }
+  };
+
   return (
-    <DrawerRoot >
+    <DrawerRoot>
       <DrawerBackdrop />
       <DrawerTrigger asChild>
-      <AiOutlineMenu className="text-accent text-3xl" />
+        <AiOutlineMenu className="text-accent text-3xl" />
       </DrawerTrigger>
       <DrawerContent offset="4" rounded="md">
         <DrawerHeader>
@@ -66,14 +79,23 @@ const MobileNav = () => {
         <DrawerBody>
           <nav className="flex flex-col justify-center items-center gap-8">
             {links.map((link, index) => {
-              return (
-                <a
+              const isAnchor = link.path.startsWith("#");
+              return isAnchor ? (
+                <button
                   key={index}
-                  href={link.path}
-                  className="text-primary hover:border-b-2 border-primary capitalize font-light "
+                  onClick={() => handleAnchorClick(link.path)}
+                  className="text-primary hover:border-b-2 border-primary capitalize font-light"
                 >
                   {link.name}
-                </a>
+                </button>
+              ) : (
+                <Link
+                  key={index}
+                  to={link.path}
+                  className="text-primary hover:border-b-2 border-primary capitalize font-light"
+                >
+                  {link.name}
+                </Link>
               );
             })}
             <div>
@@ -86,4 +108,5 @@ const MobileNav = () => {
     </DrawerRoot>
   );
 };
+
 export default MobileNav;

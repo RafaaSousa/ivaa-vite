@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="flex flex-col justify-center min-h-screen">
       <main className="bg-background ">
-        <section className="p-8">
+        <section id="home" className="p-8">
           <div className=" flex flex-col xl:flex-row items-center justify-center xl:justify-between xl:mr-20 ">
             <div className=" top-0">
               <img
@@ -54,7 +54,7 @@ function App() {
           </div>
         </section>
 
-        <section id="sobre" className="hidden xl:flex justify-center">
+        <section id="" className="hidden xl:flex justify-center">
           <div className="flex flex-row justify-center items-center">
             <div className="flex flex-col items-center">
               <div>
@@ -84,7 +84,7 @@ function App() {
           </div>
         </section>
 
-        <section className="bg-primary p-6">
+        <section id="sobre" className="bg-primary p-6">
           <div className="flex flex-col xl:flex-row items-center xl:justify-between gap-8">
             <div className="flex flex-col items-center justify-center">
               <img
