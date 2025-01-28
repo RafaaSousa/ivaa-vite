@@ -1,6 +1,8 @@
-import Mentora from "../../assets/mentora.svg"
-import Lidera from "../../assets/lidera.svg"
-import Apoia from "../../assets/apoia.svg"
+import Mentora from "../../assets/mentora.svg";
+import Lidera from "../../assets/lidera.svg";
+import Apoia from "../../assets/apoia.svg";
+import { motion } from "framer-motion";
+
 const infos = [
   {
     title: "Mentoria",
@@ -27,25 +29,27 @@ const cards = () => {
     <div className="flex flex-col xl:flex-row xl:gap-10">
       {infos.map((info, index) => {
         return (
-          <div key={index}  className="bg-primary border rounded-[64px] py-3 mb-10 items-center text-center w-80">
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: -50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="bg-primary border rounded-[64px] py-3 mb-10 items-center text-center w-80"
+          >
             <div className="m-4">
               <li className="list-none">
-              <div
-                className="flex flex-col items-center text-center py-8"
-              >
-                <img
-                  src={info.image}
-                  alt="Ivaa Mentora"
-                  className="w-40"
-                />
-                <h1 className="font-brandon font-semibold text-primaryRed text-xl m-4">
-                  {info.title}
-                </h1>
-                <p className="font-brandon font-medium text-accent">{info.description}</p>
-              </div>
+                <div className="flex flex-col items-center text-center py-8">
+                  <img src={info.image} alt="Ivaa Mentora" className="w-40" />
+                  <h1 className="font-brandon font-semibold text-primaryRed text-xl m-4">
+                    {info.title}
+                  </h1>
+                  <p className="font-brandon font-medium text-accent">
+                    {info.description}
+                  </p>
+                </div>
               </li>
             </div>
-          </div>
+          </motion.div>
         );
       })}
     </div>
